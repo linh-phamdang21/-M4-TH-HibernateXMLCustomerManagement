@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Customers</title>
+</head>
+<body>
+<h2>Show All Customer</h2>
+<a href="/create"> Create new customer </a>
+<table class="table">
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Phone</td>
+        <td>Email</td>
+        <td>Address</td>
+    </tr>
+    <tr th:each="c : ${customers}">
+        <td th:text="${c.getId()}"></td>
+        <td th:text="${c.getName()}"></td>
+        <td th:text="${c.getAge()}"></td>
+        <td th:text="${c.getEmail()}"></td>
+        <td th:text="${c.getAddress()}"></td>
+    </tr>
+</table>
+</body>
+</html>
